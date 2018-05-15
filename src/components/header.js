@@ -7,6 +7,12 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a {
+    text-decoration: none;
+  }
+  > nav a {
+    margin: 1em;
+  }
   > h1 {
     margin: 0;
   }
