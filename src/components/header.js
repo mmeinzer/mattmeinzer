@@ -7,8 +7,10 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1em;
   a {
     text-decoration: none;
+    color: hsl(0, 0%, 28%);
   }
   > nav a {
     margin: 1em;

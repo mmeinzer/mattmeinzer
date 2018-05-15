@@ -11,7 +11,7 @@ const Wrapper = styled.section`
 const IndexPage = () => (
   <Wrapper>
     <h2>Welcome</h2>
-    <p>Web developer</p>
+    <p>As you can probably tell, this page is a work in progress</p>
   </Wrapper>
 )
 

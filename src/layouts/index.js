@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import './index.css'
 
 const Wrapper = styled.div`
-  margin: auto;
+  margin: 2em auto 0;
   max-width: 624px;
 `
 
