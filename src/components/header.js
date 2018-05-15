@@ -3,18 +3,27 @@ import Link from 'gatsby-link'
 
 import styled from 'styled-components'
 
-const Title = styled.h1`
-  font-size: 50px;
+const Wrapper = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > h1 {
+    margin: 0;
+  }
 `
 
 const Header = ({ siteTitle }) => (
-  <header>
-      <Title>
+  <Wrapper>
+      <h1>
         <Link to="/">
-          {siteTitle}
+          Matt Meinzer
         </Link>
-      </Title>
-  </header>
+      </h1>
+      <nav>
+        <Link to="/newsletter">Newsletter</Link>
+        <Link to="/about">About</Link>
+      </nav>
+  </Wrapper>
 )
 
 export default Header

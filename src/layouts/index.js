@@ -8,8 +8,8 @@ import styled from 'styled-components'
 import './index.css'
 
 const Wrapper = styled.div`
-  display: grid;
-  justify-content: center;
+  margin: auto;
+  max-width: 624px;
 `
 
 const Layout = ({ children, data }) => (
@@ -17,14 +17,12 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: `Matthew Meinzer` },
+        { name: 'keywords', content: 'Matthew Meinzer, Matt Meinzer' },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div>
-      {children()}
-    </div>
+    {children()}
   </Wrapper>
 )
 
