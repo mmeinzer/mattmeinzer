@@ -3,6 +3,8 @@ import Link from 'gatsby-link'
 
 import styled from 'styled-components'
 
+const lightGray = 'hsl(0, 0%, 28%)'
+
 const Wrapper = styled.header`
   grid-column-start: center;
   display: flex;
@@ -10,17 +12,18 @@ const Wrapper = styled.header`
   align-items: center;
   a {
     text-decoration: none;
-    color: hsl(0, 0%, 28%);
+    color: ${lightGray};
   }
   > nav a {
     margin-left: 1em;
   }
   > nav a:hover {
-    border-bottom: 2px solid hsl(0, 0%, 28%);
+    border-bottom: 2px solid ${lightGray};
   }
   > .site-name {
-    font-size: 1.5em;
-    font-weight: 700;
+    font-family: 'Crete Round';
+    font-size: 2em;
+    font-weight: 400;
   }
 `
 

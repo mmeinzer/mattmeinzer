@@ -4,6 +4,7 @@ const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.5,
   scaleRatio: 2,
+  includeNormalize: true,
   headerFontFamily: ['Crete Round', 'serif'],
   headerWeight: '400',
   bodyFontFamily: ['Roboto', 'sans-serif'],

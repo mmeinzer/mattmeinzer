@@ -9,10 +9,9 @@ import './index.css'
 
 const Wrapper = styled.div`
   display: grid;
-  justify-content: center;
-  row-gap: 2em;
+  justify-content: space-around;
+  grid-gap: 2em;
   grid-template-columns: [left]1fr [center]minmax(auto, 800px) [right]1fr;
-  grid-template-rows: 2fr 2fr;
   padding-top: 2em;
   border-top: 5px solid #1c6ba0;
 `
