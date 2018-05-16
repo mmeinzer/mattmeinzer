@@ -4,14 +4,12 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  grid-column: 2;
-  grid-row: 3;
+  grid-column-start: center;
 `
 
 const IndexPage = () => (
   <Wrapper>
-    <h2>Welcome</h2>
-    <p>As you can probably tell, this page is a work in progress</p>
+    <p>This page is a work in progress</p>
   </Wrapper>
 )
 

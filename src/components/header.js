@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Wrapper = styled.header`
+  grid-column-start: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,23 +14,24 @@ const Wrapper = styled.header`
     color: hsl(0, 0%, 28%);
   }
   > nav a {
-    margin: 1em;
+    margin-left: 1em;
   }
   > nav a:hover {
     border-bottom: 2px solid hsl(0, 0%, 28%);
   }
-  > h1 {
-    margin: 0;
+  > .site-name {
+    font-size: 1.5em;
+    font-weight: 400;
   }
 `
 
 const Header = ({ siteTitle }) => (
   <Wrapper>
-      <h1>
+      <span className="site-name">
         <Link to="/">
           Matt Meinzer
         </Link>
-      </h1>
+      </span>
       <nav>
         <Link to="/newsletter">Newsletter</Link>
         <Link to="/about">About</Link>

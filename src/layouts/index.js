@@ -8,8 +8,10 @@ import styled from 'styled-components'
 import './index.css'
 
 const Wrapper = styled.div`
-  margin: 2em auto 0;
-  max-width: 624px;
+  display: grid;
+  grid-template-columns: [left]1fr [center]auto [right]1fr;
+  padding-top: 2em;
+  border-top: 4px solid #1c6ba0;
 `
 
 const Layout = ({ children, data }) => (
