@@ -8,7 +8,6 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1em;
   a {
     text-decoration: none;
     color: hsl(0, 0%, 28%);
@@ -21,7 +20,7 @@ const Wrapper = styled.header`
   }
   > .site-name {
     font-size: 1.5em;
-    font-weight: 400;
+    font-weight: 700;
   }
 `
 

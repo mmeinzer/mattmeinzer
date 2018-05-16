@@ -9,6 +9,7 @@ const Wrapper = styled.section`
 
 const IndexPage = () => (
   <Wrapper>
+    <h1>Hello</h1>
     <p>This page is a work in progress</p>
   </Wrapper>
 )
