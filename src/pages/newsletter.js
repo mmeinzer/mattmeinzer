@@ -1,9 +1,15 @@
 import React from 'react'
 
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  grid-column-start: center;
+`
+
 const NewsletterPage = () => (
-  <div>
+  <Wrapper>
     <h2>Newsletter</h2>
-  </div>
+  </Wrapper>
 )
 
 export default NewsletterPage

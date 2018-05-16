@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  grid-column-start: center;
+`
 
 const AboutPage = () => (
-  <div>
+  <Wrapper>
     <h2>About</h2>
-  </div>
+  </Wrapper>
 )
 
 export default AboutPage
