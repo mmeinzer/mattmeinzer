@@ -15,6 +15,9 @@ const Wrapper = styled.header`
   > nav a {
     margin: 1em;
   }
+  > nav a:hover {
+    border-bottom: 2px solid hsl(0, 0%, 28%);
+  }
   > h1 {
     margin: 0;
   }
