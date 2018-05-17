@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const lightGray = 'hsl(0, 0%, 28%)'
+const darkGray = 'hsl(0, 0%, 20%)'
 
 const Wrapper = styled.header`
   grid-column-start: center;
@@ -20,10 +21,10 @@ const Wrapper = styled.header`
   > nav a:hover {
     border-bottom: 2px solid ${lightGray};
   }
-  > .site-name {
-    font-family: 'Crete Round';
+  > .site-name > a {
+    font-family: 'Lora';
     font-size: 2em;
-    font-weight: 400;
+    color: ${darkGray};
   }
 `
 

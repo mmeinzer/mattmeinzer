@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  grid-column-start: center;
+  justify-self: center;
+`
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-  </div>
+  <Wrapper>
+    <h1>Not Found</h1>
+    <p>Let's get outta here...</p>
+  </Wrapper>
 )
 
 export default NotFoundPage

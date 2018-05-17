@@ -1,19 +1,21 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: "16px",
-  baseLineHeight: 1.5,
+  baseFontSize: "18px",
+  baseLineHeight: 1.6,
   scaleRatio: 2,
   includeNormalize: true,
-  headerFontFamily: ['Crete Round', 'serif'],
-  headerWeight: '400',
+  headerFontFamily: ['Lora', 'serif'],
+  headerWeight: '700',
+  headerColor: 'hsl(0, 0%, 20%)',
   bodyFontFamily: ['Roboto', 'sans-serif'],
   bodyWeight: '400',
+  bodyColor: 'hsl(0, 0%, 28%)',
   googleFonts: [
     {
-      name: 'Crete Round',
+      name: 'Lora',
       styles: [
-        '400',
+        '700',
       ],
     },
     {
