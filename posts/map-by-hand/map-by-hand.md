@@ -1,6 +1,6 @@
 ---
 path: "/map-by-hand"
-date: "2018-05-16"
+date: "2018-05-20"
 title: "Building the JavaScript `map` Function"
 live: true
 ---
@@ -141,3 +141,8 @@ let newArr = oldArr.map(num => num + 1)
 ```
 
 You'll notice here that the callback we passed isn't even taking the array index nor is it taking a reference to the array. This forces us to think about each value individually and not be tempted to mutate the original array.
+
+
+## Conclusion
+
+The map function is just one of many that can make your code a lot cleaner. It can take some getting used to when you're first learning to use it, but hopefully you saw that there's really not much to it. About 4 lines of code got us the same functionality.
