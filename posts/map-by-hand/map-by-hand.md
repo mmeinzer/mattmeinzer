@@ -1,48 +1,143 @@
 ---
 path: "/map-by-hand"
 date: "2018-05-16"
-title: "Building the JavaScript map Function"
+title: "Building the JavaScript `map` Function"
 live: true
 ---
 
-Today we're going to work to understand JavaScript's map function by building it ourselves.
+In my JavaScript learning journey, the `map` function has opened up a whole new way of writing JavaScript.
 
-## Building a simple tool to make apartment hunting easier
-I've been working on a simple web app designed to make apartment hunting "remotely" a bit easier--specifically when your future roommate is out of the state or otherwise not able to look at apartments in-person.
+Using `map` has made my code much more readable and declarative, and anytime I have an array that I need to transform to an array of the same length, `map` is the first thing that my mind goes to.
+
+If you haven't had much exposure to functional programming or higher-order functions, `map` and it's siblings: `filter` and `reduce` can take some getting used to.
+
+## How do we use `map`?
+
+Before we get to writing our own version of map, let's look at a simple example of how it's used.
+
+Let's pretend that we have a function which adds 1 to whatever number we pass in:
 
 ```javascript
-const a = [1,2,3];
-console.log(a);
+// Our simple adding function
+function addOne(num) {
+  return num + 1
+}
 ```
 
-Right now, Coby and I have a shared Google Sheet that we add apartments to. The data we 'tend' to care about is the location, price, and number of bedroom and bathrooms. We put this into the Google Sheet so that...we have a synced and editable for apartments we're both interested in. It's simple, and it works.
-That being said, the system isn't perfect. There are some things that I'd like improve, which makes this the perfect opportunity to try out the web technologies I've been learning.
-## Problem
-The problem that we have with using the spreadsheet is that for each potential apartment, we need to enter the same standard pieces of information:
+```javascript
+// ... or as an arrow function
+const addOne = num => num + 1
+```
 
- - Name of the complex
- - Leasing office number (to schedule a tour or ask about current availability)
- - Address
- - Neighborhood it's located in
+Now, with our `addOne` function, let's say we want to take our existing array and build a new one of the same length but with one added to each element.
 
-Since we've only been looking at apartments on the site apartments.com, that information is always in the same place --- both on the site and in the markup. Sounds like the *perfect* candidate for some scraping.
-## Idea: Loft -- A simple tool to keep track of apartments
-I'm calling this web app Loft --- not because it needs a name, but because naming things is fun.
+Without using the `map` or `forEach` functions, that code might look like this:
 
-The main goal of Loft is to duplicate the functionality of our apartments spreadsheet but extend it to be more useful for our particular use case. Specifically, I want the application to accept the URL of an apartment and then retrieve and display the details of the apartment that I mentioned above.
-## The tools
+```javascript
+const someArr = [1, 2, 3]
+ 
+const newArr = []
+for (let i = 0; i < someArr.length; i++) {
+  const result = addOne(someArr[i]);
+  newArray.push(result);
+}
+```
 
-## Defining our scope
-Useful, yes. but our current Google spreadsheet is useful. Realistically to tool I'm building here will save me much less time than it will take to build. But What we're building here should go a step beyond that.
+You've probably seen this pattern a lot. It's used a lot, and almost every programmer would immediatley recognize it. In fact, this pattern is so common in instructional material and other languages, I would argue that that's one of it's strengths.
 
-In other words, I'd much rather finish a small application, that does exactly what I want it to, than to have another unfinished app that w
+That being said, anytime we want to iterate over an array in our program and output a new one, we have to write a lot of the same boiler plate.
 
-**What does it do?**
+What `map` does for us is help us to achieve the exact same result but with much less code. With the use of the `map` function, the code we previously wrote can now be replaced with:
 
- - Lets us add or remove apartments
-	 - Adding an apartment by URL should get the important data we want and display it
- - Shows us the same information if we leave the app and come back
-	 - In other words, the data should persist
- - Accept and store comments about each apartment
+```javascript
+const someArr = [1, 2, 3] 
+const newArr = someArr.map(addOne)
+```
 
-What we don't want: The perfect replacement for every apartment finding website ever
+`map` is a higher order function. As you can see in the example above, it takes a single function in as its only required argument. We passed it the function `addOne` that we wrote earlier.
+
+If you're less familiar with higher order components, this looks weird. It takes some time to get used to, but it's a very powerful concept that important to unlocking the full power of JavaScript.
+
+## Building it ourselves
+
+To get a little more comfortable with the `map` function, let's build it ourselves. This might sound intimidating, but we've actually already done most of the work!
+
+Our version of `map` (we'll call it `myMap`) will take in two arguments: a JavaScript array and a callback function that will get called with each element of the array:
+
+```javascript
+myMap([1,2,3], ourCallback)
+```
+
+This is slightly different than the built-in `map` function that we used earlier which is a method on the built-in `Array` and called with dot notation:
+
+```javascript
+[1, 2, 3].map(ourCallback)
+```
+
+### Writing `myMap`
+
+
+Let's start with our code from above:
+
+```javascript
+const someArr = [1, 2, 3]
+ 
+const newArr = []
+for (let i = 0; i < someArr.length; i++) {
+  const result = addOne(someArr[i]);
+  newArray.push(result);
+}
+```
+
+Looking at this code, we can see that the most of it is generic and not tied to a specific array or callback function. The exceptions are our reference to `someArr` and our call to the `addOne` function.
+
+By wrapping this piece of code in a function, we can abstract out the array and callback (`addOne`) so that we can reuse it with *any* array and *any* callback:
+
+```javascript
+function myMap(origArr, cb) {
+  const newArr = []
+  for (let i = 0; i < origArr.length; i++) {
+    // For each array item, we call the callback function with 3 parameters:
+    // the item itself, the index, and the entire array...
+    const result = cb(origArr[i], i, origArr)
+    // Then we add the result of that callback to the new array...
+    newArr.push(result)
+  }
+  return newArr
+}
+```
+
+That's really it! You'll notice that for each iteration, we are calling our argument with the current item (just like before), but we're also passing it two more arguments. What's up with that?
+
+## Additional parameters to `map`
+
+While we don't have to use them, the built-in `map` function passes our callback function two [additional parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Parameters) after the array item itself: the index of the current item and the entire original array. These can both be extremely useful when you're writing more complicated callback functions.
+
+## Mutation
+
+Fundamental to the idea of map is that the original array is not mutated. Although the callback function you pass to map could theoretically change the array, this is generally frowned upon.
+
+It's best store the resulting array in a new variable and not modify the original array.
+
+What does that look like?
+
+```javascript
+// An example of mutating the array in the map callback.
+// Don't do this.
+let oldArr = [1, 2, 3]
+let newArr = oldArr.map((num,i,arr) => (arr[i] = arr[i] + 1))
+```
+
+Because the return value of the assignment expression is equal to the right hand side of the expression (in this case the values 2, 3, and finally 4), `newArr` will be equal to `[2, 3, 4]`, but we've also modified `oldArr` which will *also* equal `[2, 3, 4]`.
+
+Don't do this. If you ever catch yourself doing assignment to the original array, stop yourself, and figure out a way to make the callback pure.
+
+In our simple example that would look like this:
+
+```javascript
+// an example of mutating the array in the map callback
+let oldArr = [1, 2, 3]
+let newArr = oldArr.map(num => num + 1)
+```
+
+You'll notice here that the callback we passed isn't even taking the array index nor is it taking a reference to the array. This forces us to think about each value individually and not be tempted to mutate the original array.
