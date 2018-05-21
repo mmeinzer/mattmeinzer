@@ -11,8 +11,8 @@ import 'prismjs/themes/prism-tomorrow.css'
 const Wrapper = styled.div`
   display: grid;
   justify-content: space-around;
-  grid-gap: 2em;
-  grid-template-columns: [left]1fr [center]minmax(auto, 740px) [right]1fr;
+  grid-gap: 1em;
+  grid-template-columns: [left]1fr [center]fit-content(740px) [right]1fr;
   padding-top: 2em;
   border-top: 5px solid #1c6ba0;
 `

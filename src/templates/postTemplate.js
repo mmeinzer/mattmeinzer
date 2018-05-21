@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.article`
   grid-column-start: center;
+  overflow: auto;
 `
 
 const TitleDate = styled.div`
