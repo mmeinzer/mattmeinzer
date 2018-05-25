@@ -43,9 +43,11 @@ for (let i = 0; i < someArr.length; i++) {
 }
 ```
 
-You've probably seen this pattern a lot. It's used a lot, and almost every programmer would immediatley recognize it. In fact, this pattern is so common in instructional material and other languages, I would argue that that's one of it's strengths.
+You've probably seen this pattern a lot. Most programmers can immediatley recognize it, which I think is one of it's strengths.
 
-That being said, anytime we want to iterate over an array in our program and output a new one, we have to write a lot of the same boiler plate.
+That being said, anytime we want to iterate over an array in our program and output a new one, we have to write a lot of the same boilerplate.
+
+The unique piece of code can easily get lost in the boilerplate.
 
 What `map` does for us is help us to achieve the exact same result but with much less code. With the use of the `map` function, the code we previously wrote can now be replaced with:
 
