@@ -3,7 +3,8 @@ import Link from 'gatsby-link'
 
 import styled from 'styled-components'
 
-const lightGray = 'hsl(0, 0%, 28%)'
+const lightGray = 'hsl(0, 0%, 56%)'
+const middleGray = 'hsl(0, 0%, 28%)'
 const darkGray = 'hsl(0, 0%, 20%)'
 
 const Wrapper = styled.header`
@@ -11,17 +12,22 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 1.6em;
+  border-bottom: 2px solid ${lightGray};
   a {
     text-decoration: none;
-    color: ${lightGray};
   }
   > nav a {
+    color: ${middleGray};
     margin-left: 1em;
   }
   > nav a:hover {
-    border-bottom: 2px solid ${lightGray};
+    border-bottom: 2px solid ${middleGray};
+  }
+  > .site-name {
   }
   > .site-name > a {
+    line-height: 1em;
     font-family: 'Lora';
     font-size: 2em;
     color: ${darkGray};
