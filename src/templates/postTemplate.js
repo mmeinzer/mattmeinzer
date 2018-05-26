@@ -3,13 +3,16 @@ import Helmet from 'react-helmet';
 
 import styled from 'styled-components';
 
+import './post.css';
+
 const Wrapper = styled.article`
   grid-column-start: center;
   overflow: auto;
+  margin-top: .6em;
 `
 
 const TitleDate = styled.div`
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.4em;
   > .title {
     margin-bottom: 0;
   }

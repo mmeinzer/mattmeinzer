@@ -1,12 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import Header from '../components/Header'
 
 import styled from 'styled-components'
 
 import './index.css'
 import 'prismjs/themes/prism-tomorrow.css'
+
+const blue = '#1c6ba0'
 
 const Wrapper = styled.div`
   display: grid;
@@ -14,7 +16,7 @@ const Wrapper = styled.div`
   grid-gap: 1em;
   grid-template-columns: [left]1fr [center]fit-content(740px) [right]1fr;
   padding-top: 2em;
-  border-top: 5px solid #1c6ba0;
+  border-top: 5px solid ${blue};
 `
 
 const Layout = ({ children, data }) => (
