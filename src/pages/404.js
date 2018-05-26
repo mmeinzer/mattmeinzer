@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 
 const NotFoundPage = () => (
   <Wrapper>
-    <h1>Not Found</h1>
+    <h1>That page doesn't exist</h1>
     <p>Let's get outta here...</p>
   </Wrapper>
 )
