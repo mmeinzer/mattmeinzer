@@ -3,8 +3,6 @@ import Helmet from 'react-helmet';
 
 import styled from 'styled-components';
 
-import './post.css';
-
 const Wrapper = styled.article`
   grid-column-start: center;
   overflow: auto;
