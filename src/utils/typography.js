@@ -16,6 +16,7 @@ const typography = new Typography({
       name: 'Lora',
       styles: [
         '700',
+        '400',
       ],
     },
     {
