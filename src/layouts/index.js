@@ -13,7 +13,7 @@ const blue = '#1c6ba0'
 const Wrapper = styled.div`
   display: grid;
   justify-content: space-around;
-  grid-gap: 2em;
+  grid-gap: 1.6em;
   grid-template-columns: [left]1fr [center]fit-content(740px) [right]1fr;
   padding-top: 2em;
   border-top: 5px solid ${blue};
