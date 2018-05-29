@@ -25,7 +25,6 @@ const Wrapper = styled.section`
   .email-input {
     grid-column: 2;
     padding: .1em;
-    /* margin-bottom: 0.8rem; */
   }
   .submit-button {
     grid-column: 2;
