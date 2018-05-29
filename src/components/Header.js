@@ -12,7 +12,7 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.6em;
+  padding-bottom: .4em;
   border-bottom: 2px solid ${lightGray};
   a {
     text-decoration: none;
