@@ -29,6 +29,7 @@ const Wrapper = styled.header`
   > .site-name > a {
     line-height: 1em;
     font-family: 'Lora';
+    font-weight: 700;
     font-size: 2em;
     color: ${darkGray};
   }
