@@ -14,13 +14,14 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .email-form {
-    background: hsl(0, 0%, 80%);
-    padding: 1em;
+    background: hsl(0, 0%, 95%);
+    padding: 1.2em;
     display: grid;
     grid-gap: 1.2em;
     grid-template-columns: 2fr 3fr 2fr;
     justify-items: stretch;
     margin-bottom: 1.6rem;
+    box-shadow: ${theme.boxShadow.low};
   }
   .headline {
     font-weight: normal;
@@ -32,7 +33,9 @@ const Wrapper = styled.section`
   }
   .email-input {
     grid-column: 2;
-    padding: .1em;
+    padding: .2em;
+    text-align: center;
+    border: 2px solid ${theme.colors.blue};
   }
   .submit-button {
     box-shadow: ${theme.boxShadow.high};
