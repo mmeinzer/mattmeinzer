@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Matt Meinzer',
+    siteUrl: 'https://www.mattmeinzer.com',
   },
   plugins: [
     {
@@ -42,6 +43,9 @@ module.exports = {
         // Avoids sending pageview hits from custom paths
         exclude: [],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
     },
   ],
 };
