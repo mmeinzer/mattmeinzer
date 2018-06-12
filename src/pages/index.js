@@ -51,9 +51,6 @@ const Wrapper = styled.section`
     background: ${theme.colors.darkBlue};
     box-shadow: ${theme.boxShadow.low};
   }
-  .highlight {
-    background-image: linear-gradient(to right, rgba(255, 255, 0, .8) 100%, rgba(255, 255, 0, 0.8) 0%);
-  }
 `
 
 const IndexPage = props => (
@@ -61,7 +58,7 @@ const IndexPage = props => (
     <h1 className="heading">Looking to get hired as a full-time JavaScript developer?</h1>
     <form className="email-form" action="https://www.getdrip.com/forms/83275181/submissions" method="post" data-drip-embedded-form="83275181">
       <p className="headline" data-drip-attribute="headline">
-      Sign up for my once-a-week email with JavaScript tricks and tips to help you <span className="highlight">become a job-ready developer.</span>
+      Sign up for my once-a-week email with JavaScript tricks and tips to help you become a job-ready developer.
       </p>
       <input className="email-input" type="email" id="drip-email" name="fields[email]" placeholder="Your email address..." />
       <div className="g-recaptcha" data-sitekey="6Le7wFsUAAAAAAnU2H7inCovL-I1eQIBOPRimksY"></div>
