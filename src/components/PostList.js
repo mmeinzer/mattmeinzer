@@ -8,6 +8,9 @@ const Wrapper = styled.div`
     list-style: none;
     margin-left: 0;
   }
+  .post-link {
+    text-decoration: none;
+  }
 `
 
 const PostList = ({ posts }) => (
@@ -20,7 +23,7 @@ const PostList = ({ posts }) => (
       const { path, date, title } = post.node.frontmatter
       return (
         <li key={path}>
-          <Link to={path}>
+          <Link to={path} className="post-link">
             <h3>{title}</h3>
           </Link>
         </li>
