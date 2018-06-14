@@ -61,7 +61,6 @@ const IndexPage = props => (
       Sign up for my once-a-week email with JavaScript tricks and tips to help you become a job-ready developer.
       </p>
       <input className="email-input" type="email" id="drip-email" name="fields[email]" placeholder="Your email address..." />
-      <div className="g-recaptcha" data-sitekey="6Le7wFsUAAAAAAnU2H7inCovL-I1eQIBOPRimksY"></div>
       <input className="submit-button" type="submit" value="Join now" data-drip-attribute="sign-up-button" />
     </form>
     <PostList posts={props.data.allMarkdownRemark.edges} />
