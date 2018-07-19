@@ -52,14 +52,6 @@ const Wrapper = styled.section`
 
 const IndexPage = props => (
   <Wrapper>
-    <h1 className="heading">Looking to get hired as a full-time JavaScript developer?</h1>
-    <form className="email-form" action="https://www.getdrip.com/forms/83275181/submissions" method="post" data-drip-embedded-form="83275181">
-      <p className="headline" data-drip-attribute="headline">
-      Sign up for my once-a-week email with JavaScript tricks and tips to help you become a job-ready developer.
-      </p>
-      <input className="email-input" type="email" id="drip-email" name="fields[email]" placeholder="Your email address..." />
-      <input className="submit-button" type="submit" value="Join now" data-drip-attribute="sign-up-button" />
-    </form>
     <PostList posts={props.data.allMarkdownRemark.edges} />
   </Wrapper>
 )
