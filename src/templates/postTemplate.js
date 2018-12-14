@@ -1,12 +1,15 @@
-import React from "react";
-import Helmet from 'react-helmet';
+import React from 'react'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
 
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+import Layout from '../components/layout'
 
 const Wrapper = styled.article`
   grid-column-start: center;
   overflow: auto;
-  margin-top: .6em;
+  margin-top: 0.6em;
 `
 
 const TitleDate = styled.div`
@@ -15,25 +18,29 @@ const TitleDate = styled.div`
     margin-bottom: 0;
   }
   > .pub-date {
-    color: hsl(0, 0%, 40%)
+    color: hsl(0, 0%, 40%);
   }
 `
 
 export default function Template({ data }) {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { markdownRemark } = data
+  const { frontmatter, html } = markdownRemark
   return (
-    <Wrapper>
-      <Helmet>
-        <title>{frontmatter.title}</title>
-      </Helmet>
-      <TitleDate>
-        <h1 className="title">{frontmatter.title}</h1>
-        <time dateTime={frontmatter.dateTime} className="pub-date">{frontmatter.dispDate}</time>
-      </TitleDate>
-      <div dangerouslySetInnerHTML={{ __html: html }}/>
-    </Wrapper>
-  );
+    <Layout>
+      <Wrapper>
+        <Helmet>
+          <title>{frontmatter.title}</title>
+        </Helmet>
+        <TitleDate>
+          <h1 className="title">{frontmatter.title}</h1>
+          <time dateTime={frontmatter.dateTime} className="pub-date">
+            {frontmatter.dispDate}
+          </time>
+        </TitleDate>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </Wrapper>
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -48,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

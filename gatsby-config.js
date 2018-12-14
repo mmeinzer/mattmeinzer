@@ -8,7 +8,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts`,
-        name: 'blog-posts'
+        name: 'blog-posts',
       },
     },
     'gatsby-plugin-react-helmet',
@@ -33,13 +33,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-96186804-4",
+        trackingId: 'UA-96186804-4',
         // Puts tracking script in the head instead of the body
         head: true,
-        // Setting this parameter is optional
         anonymize: false,
-        // Setting this parameter is also optional
-        respectDNT: false,
+        respectDNT: true,
         // Avoids sending pageview hits from custom paths
         exclude: [],
       },
@@ -48,4 +46,4 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
     },
   ],
-};
+}

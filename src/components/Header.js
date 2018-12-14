@@ -12,7 +12,7 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: .4em;
+  padding-bottom: 0.4em;
   border-bottom: 2px solid ${lightGray};
   a {
     text-decoration: none;
@@ -37,15 +37,13 @@ const Wrapper = styled.header`
 
 const Header = ({ siteTitle }) => (
   <Wrapper>
-      <span className="site-name">
-        <Link to="/">
-          Matt Meinzer
-        </Link>
-      </span>
-      <nav>
-        <Link to="/newsletter">Newsletter</Link>
-        <Link to="/about">About</Link>
-      </nav>
+    <span className="site-name">
+      <Link to="/">Matt Meinzer</Link>
+    </span>
+    <nav>
+      <Link to="/newsletter">Newsletter</Link>
+      <Link to="/about">About</Link>
+    </nav>
   </Wrapper>
 )
 

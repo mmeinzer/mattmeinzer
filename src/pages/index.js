@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
+import Layout from '../components/layout'
 import PostList from '../components/PostList'
 import theme from '../utils/theme'
 
@@ -30,7 +32,7 @@ const Wrapper = styled.section`
   }
   .email-input {
     grid-column: 2;
-    padding: .2em;
+    padding: 0.2em;
     text-align: center;
     border: 2px solid ${theme.colors.blue};
   }
@@ -38,9 +40,9 @@ const Wrapper = styled.section`
     box-shadow: ${theme.boxShadow.high};
     grid-column: 2;
     background: ${theme.colors.blue};
-    transition: background .2s;
+    transition: background 0.2s;
     color: #fff;
-    padding: .4em;
+    padding: 0.4em;
     border: none;
     cursor: pointer;
   }
@@ -51,9 +53,11 @@ const Wrapper = styled.section`
 `
 
 const IndexPage = props => (
-  <Wrapper>
-    <PostList posts={props.data.allMarkdownRemark.edges} />
-  </Wrapper>
+  <Layout>
+    <Wrapper>
+      <PostList posts={props.data.allMarkdownRemark.edges} />
+    </Wrapper>
+  </Layout>
 )
 
 export const pageQuery = graphql`
