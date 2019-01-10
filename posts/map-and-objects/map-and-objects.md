@@ -2,7 +2,7 @@
 path: "/map-and-arrays-of-objects"
 date: "2019-01-07"
 title: "Using `map` on an array of objects"
-live: false
+live: true
 ---
 
 Here's a quick test: What does the following code output?
@@ -148,3 +148,6 @@ const artifactsWithCityAndCountry = ancientArtifacts.map(artifact => {
   return { ...artifact, whereDiscovered: {city, country} }
 })
 ```
+
+This simple change, yields a pure function that doesn't modify the original array or any of the objects contained within it.
+
