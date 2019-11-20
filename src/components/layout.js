@@ -9,15 +9,13 @@ import styled from 'styled-components'
 import './layout.css'
 import 'prismjs/themes/prism-tomorrow.css'
 
-const blue = '#1c6ba0'
-
 const Wrapper = styled.div`
   display: grid;
   justify-content: space-around;
   grid-gap: 1.6em;
   grid-template-columns: [left]1fr [center]fit-content(740px) [right]1fr;
   padding-top: 2em;
-  border-top: 5px solid ${blue};
+  border-top: 5px solid #1c6ba0;
 `
 
 const Layout = ({ children }) => (

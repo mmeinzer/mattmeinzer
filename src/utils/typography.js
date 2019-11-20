@@ -1,9 +1,9 @@
 import Typography from 'typography';
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "16px",
   baseLineHeight: 1.6,
-  scaleRatio: 2,
+  scaleRatio: 1.6,
   includeNormalize: true,
   headerFontFamily: ['Lora', 'serif'],
   headerWeight: '700',

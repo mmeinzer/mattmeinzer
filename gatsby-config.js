@@ -19,6 +19,9 @@ module.exports = {
           `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-prismjs`,
+            options: {
+              noInlineHighlight: true,
+            }
           },
         ],
       },
