@@ -40,9 +40,6 @@ const Header = ({ siteTitle }) => (
     <span className="site-name">
       <Link to="/">Matt Meinzer</Link>
     </span>
-    <nav>
-      <Link to="/about">About</Link>
-    </nav>
   </Wrapper>
 )
 
