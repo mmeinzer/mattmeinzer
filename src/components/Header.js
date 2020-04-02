@@ -14,18 +14,23 @@ const Wrapper = styled.header`
   align-items: center;
   padding-bottom: 0.4em;
   border-bottom: 2px solid ${lightGray};
+
   a {
     text-decoration: none;
   }
+
   > nav a {
     color: ${middleGray};
     margin-left: 1em;
   }
+
   > nav a:hover {
     border-bottom: 2px solid ${middleGray};
   }
+
   > .site-name {
   }
+
   > .site-name > a {
     line-height: 1em;
     font-family: 'Nunito Sans';
@@ -35,7 +40,7 @@ const Wrapper = styled.header`
   }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <Wrapper>
     <span className="site-name">
       <Link to="/">Matt Meinzer</Link>

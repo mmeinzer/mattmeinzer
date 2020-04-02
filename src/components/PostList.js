@@ -8,14 +8,24 @@ const Wrapper = styled.div`
     list-style: none;
     margin-left: 0;
   }
+
   .post-link {
     text-decoration: none;
+  }
+
+  .post-link:hover {
+
+    h3{
+      text-decoration: underline;
+      color: hsl(0, 0%, 10%);
+    }
+
   }
 `
 
 const PostList = ({ posts }) => (
   <Wrapper>
-    <h2>Recent Posts</h2>
+    <h2>Posts</h2>
     <ol className="posts-list">
       {posts.filter(post => post.node.frontmatter.live).map(post => {
         const { path, title } = post.node.frontmatter
