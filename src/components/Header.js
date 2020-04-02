@@ -41,7 +41,6 @@ const Header = ({ siteTitle }) => (
       <Link to="/">Matt Meinzer</Link>
     </span>
     <nav>
-      <Link to="/newsletter">Newsletter</Link>
       <Link to="/about">About</Link>
     </nav>
   </Wrapper>
