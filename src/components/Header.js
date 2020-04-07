@@ -38,12 +38,19 @@ const Wrapper = styled.header`
     font-size: 2em;
     color: ${darkGray};
   }
+
+  .about > a {
+    color: ${darkGray};
+  }
 `
 
 const Header = () => (
   <Wrapper>
     <span className="site-name">
       <Link to="/">Matt Meinzer</Link>
+    </span>
+    <span className="about">
+      <Link to="/about">About</Link>
     </span>
   </Wrapper>
 )
