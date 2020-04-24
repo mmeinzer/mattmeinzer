@@ -2,9 +2,8 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './Header'
-
 import styled from 'styled-components'
+import Header from './Header'
 
 import './layout.css'
 import 'prismjs/themes/prism-tomorrow.css'
