@@ -13,6 +13,7 @@ const StyledForm = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 5rem;
 
   .form {
     margin: 0 0 1rem 0;

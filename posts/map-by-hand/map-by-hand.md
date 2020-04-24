@@ -15,7 +15,7 @@ If you haven't had much exposure to functional programming or higher-order funct
 
 Before we get to writing our own version of map, let's look at a simple example of how it's used.
 
-Let's pretend that we have a function which adds 1 to whatever number we pass in:
+In order to keep things simple, we'll start with a function that adds 1 to whatever number we pass in:
 
 ```javascript
 // Our simple adding function
@@ -29,7 +29,7 @@ function addOne(num) {
 const addOne = num => num + 1
 ```
 
-Now, with our `addOne` function, let's say we want to take our existing array and build a new one of the same length but with one added to each element.
+Now that we have an `addOne` function, let's say we want to take our existing array and build a new array of the same length - but with 1 added to each element.
 
 Without using the `map` or `forEach` functions, that code might look like this:
 
@@ -43,22 +43,24 @@ for (let i = 0; i < someArr.length; i++) {
 }
 ```
 
-You've probably seen this pattern a lot. Most programmers can immediatley recognize it, which I think is one of it's strengths.
+You've probably seen this pattern a lot. Most programmers immediatley recognize it - which can actually be one of it's strengths.
 
 That being said, anytime we want to iterate over an array in our program and output a new one, we have to write a lot of the same boilerplate.
 
-The unique piece of code can easily get lost in the boilerplate.
+The unique piece of code - in this case the `addOne` function call - gets a bit lost in the syntax of the `for` loop.
 
-What `map` does for us is help us to achieve the exact same result but with much less code. With the use of the `map` function, the code we previously wrote can now be replaced with:
+Now let's take a look at how to achieve the same effect with `map`:
 
 ```javascript
 const someArr = [1, 2, 3] 
 const newArr = someArr.map(addOne)
 ```
 
+Here `map` yields the same result but with much less code.
+
 `map` is a higher order function. As you can see in the example above, it takes a single function in as its only required argument. We passed it the function `addOne` that we wrote earlier.
 
-If you're less familiar with higher order components, this looks weird. It takes some time to get used to, but it's a very powerful concept that important to unlocking the full power of JavaScript.
+If you're less familiar with higher order components, this looks weird and takes some time to get used to, but it's a very powerful concept that's important to unlocking the full power of JavaScript.
 
 ## Building it ourselves
 
@@ -100,8 +102,9 @@ function myMap(origArr, cb) {
   const newArr = []
   for (let i = 0; i < origArr.length; i++) {
     // For each array item, we call the callback function with 3 parameters:
-    // the item itself, the index, and the entire array...
+    // the item itself, the index, and the entire original array...
     const result = cb(origArr[i], i, origArr)
+
     // Then we add the result of that callback to the new array...
     newArr.push(result)
   }
@@ -109,7 +112,7 @@ function myMap(origArr, cb) {
 }
 ```
 
-That's really it! You'll notice that for each iteration, we are calling our argument with the current item (just like before), but we're also passing it two more arguments. What's up with that?
+That's really it! You'll notice that for each iteration, we are calling our callback with the current item (`origArr[i]`), but we're also passing in two other arguments - `i` and `origArr`. What's up with that?
 
 ## Additional parameters to `map`
 
@@ -121,7 +124,7 @@ Fundamental to the idea of map is that the original array is not mutated. Althou
 
 It's best store the resulting array in a new variable and not modify the original array.
 
-What does that look like?
+Here's an example of mutating the original array. Don't write code like this:
 
 ```javascript
 // An example of mutating the array in the map callback.
@@ -147,4 +150,4 @@ You'll notice here that the callback we passed isn't even taking the array index
 
 ## Conclusion
 
-The map function is just one of many that can make your code a lot cleaner. It can take some getting used to when you're first learning to use it, but hopefully you saw that there's really not much to it. About 4 lines of code got us the same functionality.
+The map function is just one of many that can make your code a lot cleaner. It can take some getting used to when you're first learning to use it, but with practice it really does lead to cleaner code.

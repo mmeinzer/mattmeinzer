@@ -14,12 +14,10 @@ const Wrapper = styled.div`
   }
 
   .post-link:hover {
-
-    h3{
+    h3 {
       text-decoration: underline;
       color: hsl(0, 0%, 10%);
     }
-
   }
 `
 
@@ -27,16 +25,18 @@ const PostList = ({ posts }) => (
   <Wrapper>
     <h2>Posts</h2>
     <ol className="posts-list">
-      {posts.filter(post => post.node.frontmatter.live).map(post => {
-        const { path, title } = post.node.frontmatter
-        return (
-          <li key={path}>
-            <Link to={path} className="post-link">
-              <h3>{title}</h3>
-            </Link>
-          </li>
-        )
-      })}
+      {posts
+        .filter(post => post.node.frontmatter.live)
+        .map(post => {
+          const { path, title } = post.node.frontmatter
+          return (
+            <li key={path}>
+              <Link to={path} className="post-link">
+                <h3>{title}</h3>
+              </Link>
+            </li>
+          )
+        })}
     </ol>
   </Wrapper>
 )
