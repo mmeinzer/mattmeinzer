@@ -29,8 +29,10 @@ const StyledForm = styled.div`
 
   .email {
     border: 1px solid #e3e3e3;
+    border-radius: 4px;
     padding: 12px;
     font-size: 1rem;
+    flex-grow: 1;
   }
 
   .submit {
@@ -51,9 +53,9 @@ function Signup() {
         method="post"
       >
         <h3 className="headline">
-          Intersted in more JavaScript articles like this one?
+          Intersted in learning more about JavaScript?
         </h3>
-        <p>Sign up for my monthly newsletter</p>
+        <p>Sign up for my weekly newsletter</p>
         <div className="info-row">
           <input
             className="email"
