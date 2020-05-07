@@ -33,7 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges
-      .filter(({ node }) => node.frontmatter.live)
+      .filter(({ node }) => node.frontmatter.live) // Only build pages for live posts
       .forEach(({ node }) => {
         createPage({
           path: node.frontmatter.path,
