@@ -36,9 +36,7 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Matthew Meinzer' },
             { name: 'keywords', content: 'Matthew Meinzer, Matt Meinzer' },
           ]}
-        >
-          <script src="https://www.googleoptimize.com/optimize.js?id=OPT-5J6Z4BQ"></script>
-        </Helmet>
+        />
         <Header siteTitle={data.site.siteMetadata.title} />
         {children}
       </Wrapper>
