@@ -1,7 +1,7 @@
-import Typography from 'typography';
+import Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: "16px",
+  baseFontSize: '16px',
   baseLineHeight: 1.6,
   scaleRatio: 1.6,
   includeNormalize: true,
@@ -14,17 +14,13 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Nunito Sans',
-      styles: [
-        '400',
-      ],
+      styles: ['400'],
     },
     {
       name: 'Roboto',
-      styles: [
-        '400',
-      ],
+      styles: ['400'],
     },
   ],
-});
+})
 
-export default typography;
+export default typography

@@ -54,9 +54,9 @@ function Signup() {
         method="post"
       >
         <h3 className="headline">
-          Intersted in learning more about JavaScript?
+          Interested in learning more about JavaScript?
         </h3>
-        <p>Sign up for my weekly newsletter</p>
+        <p>Sign up for my newsletter</p>
         <div className="info-row">
           <input
             className="email"
