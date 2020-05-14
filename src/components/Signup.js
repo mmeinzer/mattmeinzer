@@ -43,6 +43,10 @@ const StyledForm = styled.div`
     padding: 12px;
     margin: 0 0.6rem;
   }
+
+  @media screen and (max-width: 600px) {
+    background: none;
+  }
 `
 
 function Signup() {
