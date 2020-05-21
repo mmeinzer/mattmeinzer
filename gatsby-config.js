@@ -48,5 +48,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
     },
+    `gatsby-plugin-remove-trailing-slashes`,
   ],
 }
