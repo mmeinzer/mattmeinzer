@@ -49,5 +49,12 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
     },
     `gatsby-plugin-remove-trailing-slashes`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.mattmeinzer.com`,
+        stripQueryString: true,
+      },
+    },
   ],
 }
