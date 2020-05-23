@@ -33,8 +33,6 @@ const Wrapper = styled.header`
 
   > .site-name > a {
     line-height: 1em;
-    font-family: 'Nunito Sans';
-    font-weight: 400;
     font-size: 2em;
     color: ${darkGray};
   }
