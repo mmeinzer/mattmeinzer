@@ -37,11 +37,13 @@ const StyledForm = styled.div`
   }
 
   .submit {
+    border: none;
     color: rgb(255, 255, 255);
     background-color: rgb(28, 107, 160);
     border-radius: 4px;
     padding: 12px;
     margin: 0 0.6rem;
+    box-shadow: 3px 3px 33px -9px rgba(0, 0, 0, 0.5);
   }
 
   @media screen and (max-width: 600px) {

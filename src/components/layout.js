@@ -5,8 +5,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Header from './Header'
 
+import 'prismjs/themes/prism-tomorrow.css' // Code highlighting
 import './layout.css'
-import 'prismjs/themes/prism-tomorrow.css'
 
 const Wrapper = styled.div`
   display: grid;
