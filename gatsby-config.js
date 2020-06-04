@@ -56,5 +56,17 @@ module.exports = {
         stripQueryString: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.mattmeinzer.com',
+        sitemap: 'https://www.mattmeinzer.com/sitemap.xml',
+        policy: [
+          { userAgent: '*', disallow: '/dailycast/' },
+          { userAgent: '*', disallow: '/thank-you' },
+          { userAgent: '*', allow: '/' },
+        ],
+      },
+    },
   ],
 }
