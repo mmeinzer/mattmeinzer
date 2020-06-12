@@ -19,6 +19,10 @@ const Wrapper = styled.div`
       color: hsl(0, 0%, 10%);
     }
   }
+
+  h3 {
+    font-weight: 400;
+  }
 `
 
 const PostList = ({ posts }) => (
