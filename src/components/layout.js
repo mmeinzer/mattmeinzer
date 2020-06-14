@@ -8,6 +8,10 @@ import Header from './Header'
 import 'prismjs/themes/prism-tomorrow.css' // Code highlighting
 import './layout.css'
 
+import favicon16 from '../images/favicon-16x16.png'
+import favicon32 from '../images/favicon-32x32.png'
+import faviron48 from '../images/favicon.ico'
+
 const Wrapper = styled.div`
   display: grid;
   justify-content: space-around;
@@ -35,6 +39,21 @@ const Layout = ({ children }) => (
           meta={[
             { name: 'description', content: 'Matthew Meinzer' },
             { name: 'keywords', content: 'Matthew Meinzer, Matt Meinzer' },
+          ]}
+          link={[
+            {
+              rel: 'icon',
+              type: 'image/png',
+              sizes: '16x16',
+              href: `${favicon16}`,
+            },
+            {
+              rel: 'icon',
+              type: 'image/png',
+              sizes: '32x32',
+              href: `${favicon32}`,
+            },
+            { rel: 'shortcut icon', type: 'image/png', href: `${faviron48}` },
           ]}
         />
         <Header siteTitle={data.site.siteMetadata.title} />
