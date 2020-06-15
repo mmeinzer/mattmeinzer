@@ -37,8 +37,11 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Matthew Meinzer' },
-            { name: 'keywords', content: 'Matthew Meinzer, Matt Meinzer' },
+            {
+              name: 'description',
+              content:
+                "I'm a professional full-stack web developer living and working in Minneapolis, Minnesota",
+            },
           ]}
           link={[
             {

@@ -29,7 +29,16 @@ export default function Template({ data }) {
   return (
     <Layout>
       <Wrapper>
-        <Helmet>
+        <Helmet
+          meta={[
+            {
+              name: 'description',
+              content: frontmatter.metaDescription
+                ? frontmatter.metaDescription
+                : '',
+            },
+          ]}
+        >
           <title>{frontmatter.title}</title>
         </Helmet>
         <TitleDate>
@@ -54,6 +63,7 @@ export const pageQuery = graphql`
         dateTime: date(formatString: "YYYY-MM-DD")
         path
         title
+        metaDescription
       }
     }
   }

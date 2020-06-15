@@ -1,8 +1,9 @@
 ---
 path: "/insertion-sort"
 date: "2019-11-20"
-title: "Insertion sort in JavaScript"
+title: "Writing insertion sort in JavaScript"
 live: true
+metaDescription: "A straightforward implementation of insertion sort in JavaScript with commented code"
 ---
 
 As I work my way through learning more algorithms, I'm going to be posting my implementations here as a reference for my future self or anyone else that might be interested. First up - insertion sort:

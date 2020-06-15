@@ -1,8 +1,9 @@
 ---
 path: "/map-by-hand"
 date: "2018-05-20"
-title: "Building the JavaScript `map` Function"
+title: "Tutorial: How to write your own `map` function in JavaScript"
 live: true
+metaDescription: "Learn how the array map function works under the hood by writing your own version of it in JavaScript"
 ---
 
 In my JavaScript learning journey, the `map` function has opened up a whole new way of writing JavaScript.

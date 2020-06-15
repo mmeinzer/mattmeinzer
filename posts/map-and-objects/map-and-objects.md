@@ -1,8 +1,9 @@
 ---
 path: "/map-and-arrays-of-objects"
 date: "2019-01-07"
-title: "Using `map` on an array of objects"
+title: "Correct use of `map` on an array of objects"
 live: true
+metaDescription: "Map is a powerful tool for iterating through an array of objects in JavaScript but there are some gotchas that you need to watch out for"
 ---
 
 Here's a quick test: What does the following code output?
@@ -51,7 +52,7 @@ false
 // 2. What is the value of the whereDiscovered property in the ORIGINAL array
 { city: 'Amarna', country: 'Egypt'}
 
-// 3. Are the artifact objects in each list the same objects in memory?
+// 3. Are the individual artifact objects in each list the same objects in memory?
 true
 ```
 
@@ -118,7 +119,7 @@ This behavior is expected if you understand that JavaScript passes objects by re
 
 To be explicit about it, our code has two seperate arrays, each taking up memory but referncing the same set of objects.
 
-## What's the solution?
+## How to avoid mutating the original objects
 
 As I've been hinting at throughout the article, if you're using `map` you should do your best to avoid side effects. If we wanted to modify the original array intentionally, the appropraite choice would likely be `Array.prototype.forEach` which is often associated with side effects outside the scope of the callback function.
 
@@ -127,6 +128,10 @@ So how can we rewrite our orignal callback function to get a new array filled wi
 ### Two ways to copy our object
 
 Since we don't want to modify the object being passed in through the callback function we'll need to make a copy of it. Two popular options for doing this are `Object.assign` as in `const newObject = Object.assign({}, origObject)` and the ES6 spread syntax, as in `const newObject = { ...origObject }`.
+
+These methods of copying work because we don't have any nested objects within each `artifact` object.
+
+If we later decided to map over the newly created `artifactsWithCityAndCountry`, the nested `whereDiscovered` object would also need to copied before modifying it if we wanted to avoid mutation.
 
 ### Refactored code
 
