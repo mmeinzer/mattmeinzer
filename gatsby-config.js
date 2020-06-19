@@ -4,6 +4,8 @@ module.exports = {
     siteUrl: 'https://www.mattmeinzer.com',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -11,7 +13,6 @@ module.exports = {
         name: 'blog-posts',
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -21,6 +22,12 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               noInlineHighlight: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
             },
           },
         ],
