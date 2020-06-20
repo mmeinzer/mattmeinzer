@@ -54,6 +54,9 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [`/dailycast/*`, `/thank-you`],
+      },
     },
     `gatsby-plugin-remove-trailing-slashes`,
     {
