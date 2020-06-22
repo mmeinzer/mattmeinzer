@@ -6,15 +6,13 @@ title: "How to turn you Raspberry Pi into a network speed monitor"
 metaDescription: "Turning a Raspberry Pi into an always-on internet speed monitor with a public data dashboard that can be accessed from anywhere"
 ---
 
-I set up a Raspberry Pi and a corresponding web application to host and display the results of our speed test. The Raspberry Pi will be connected to the network and run speed tests with the [speedtest cli](https://www.speedtest.net/apps/cli).
-
 ![the internet speed data dashboard on as viewed on an iPhone](internet-speed-dashboard.png)
 
-## Overview
+## System overview
 
 The system we are going to set up only consists of 2 parts, a Raspberry Pi for collecting speed test information and a [publicly viewable](https://cabin-internet.herokuapp.com/) web application that the Pi will post the data to.
 
-The Raspberry Pi will be connected to the network and run speed tests with the [speedtest](https://github.com/mmeinzer/speedtest) Go program. It then posts the results--download speed, upload speed, and ping--to our web app which stores the data in in a Postgres database.
+The Raspberry Pi will be connected to the network and run speed tests with the small [speedtest](https://github.com/mmeinzer/speedtest) Go program. It then posts the results--download speed, upload speed, and ping--to our web app which stores the data in in a Postgres database.
 
 Any client fetching the homepage for our website will see a summary of the most recent speed test along with weekly averages.
 
