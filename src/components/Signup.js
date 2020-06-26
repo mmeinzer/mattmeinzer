@@ -8,7 +8,7 @@ const StyledForm = styled.div`
   border-radius: 4px;
   margin: 1rem;
   background-color: #dfdbe5;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%239C92AC' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%237cbde8' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -37,12 +37,20 @@ const StyledForm = styled.div`
   }
 
   .submit {
+    cursor: pointer;
     border: none;
     color: rgb(255, 255, 255);
     background-color: rgb(28, 107, 160);
     border-radius: 4px;
     padding: 12px;
     margin: 0 0.6rem;
+    box-shadow: 3px 3px 33px -9px rgba(0, 0, 0, 0.6);
+    transition: all 0.15s;
+  }
+
+  .submit:hover {
+    transform: scale(1.01);
+    background-color: rgb(30, 117, 175);
     box-shadow: 3px 3px 33px -9px rgba(0, 0, 0, 0.5);
   }
 
