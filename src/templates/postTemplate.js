@@ -5,7 +5,6 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import Signup from '../components/Signup'
 
 const Wrapper = styled.article`
   grid-column-start: center;
@@ -48,7 +47,6 @@ export default function Template({ data }) {
           </time>
         </TitleDate>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <Signup />
       </Wrapper>
     </Layout>
   )
